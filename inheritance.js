@@ -1,31 +1,48 @@
-// using class
-class PersonClass {
-  talk() {
-    return "Talking class";
+// // using class
+// class PersonClass {
+//   talk() {
+//     return "Talking class";
+//   }
+// }
+
+// const me = new PersonClass();
+// console.log(me.talk());
+
+// // using a function
+
+// function personFunc() {}
+// personFunc.prototype.talk = () => {
+//   return "Talking function";
+// };
+// const you = new personFunc();
+// console.log(you.talk());
+
+// // using a pure object
+
+// const personObj = {
+//   talk() {
+//     return "Talking object";
+//   },
+// };
+
+// const Steve = Object.create(personObj);
+// console.log(Steve.talk());
+
+// class inheritance
+class Animal {
+  speak() {
+    return "An animal sound";
   }
 }
 
-const me = new PersonClass();
-console.log(me.talk());
+class Dog extends Animal {
+  speak() {
+    return "Woof Woof Woof";
+  }
+}
 
-// function inheritance
-
-function personFunc() {}
-personFunc.prototype.talk = () => {
-  return "Talking function";
-};
-console.log(personFunc.prototype.talk());
-
-const you = new personFunc();
-console.log(you.talk());
-
-// pure object
-
-const personObj = {
-  talk() {
-    return "Talking object";
-  },
-};
-
-const Steve = Object.create(personObj);
-console.log(Steve.talk());
+class Cat extends Animal {
+  speak() {
+    return "Meow Meow";
+  }
+}
